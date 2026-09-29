@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>우리의 결혼식에 초대합니다</title>
+  <title>Кыялбек & Алтынай — Свадьба</title>
 
   <style>
     * {
@@ -13,115 +13,357 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background: #f4f1ec;
-      font-family: "Arial", sans-serif;
-      color: #333;
+      margin: 0;
+      background: #eeeae4;
+      color: #403d39;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     .invitation {
       width: 100%;
       max-width: 480px;
-      min-height: 100vh;
       margin: 0 auto;
-      background: #ffffff;
-      text-align: center;
+      background: #fffdf9;
+      min-height: 100vh;
+      box-shadow: 0 0 30px rgba(0,0,0,0.05);
     }
 
-    .main {
+    /* MAIN */
+    .hero {
       min-height: 100vh;
-      padding: 90px 25px 60px;
+      padding: 70px 24px 50px;
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    .small-title {
-      font-size: 12px;
-      letter-spacing: 4px;
-      color: #999;
-      margin-bottom: 35px;
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 5px;
+      color: #9b948b;
+      margin-bottom: 30px;
     }
 
-    h1 {
-      font-family: Georgia, serif;
-      font-size: 31px;
+    .names {
+      font-size: 36px;
       font-weight: normal;
-      letter-spacing: 2px;
-      margin-bottom: 14px;
+      line-height: 1.35;
+      margin-bottom: 16px;
+    }
+
+    .and {
+      font-size: 20px;
+      font-style: italic;
+      color: #a3978b;
+      margin: 2px 0;
     }
 
     .date {
-      font-size: 14px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
       letter-spacing: 2px;
-      color: #777;
-      margin-bottom: 45px;
+      color: #77716b;
+      margin: 18px 0 36px;
     }
 
-    .photo-placeholder {
+    .main-photo {
       width: 100%;
-      height: 420px;
-      background: #eeeae4;
+      height: 430px;
+      background: #e9e5df;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #aaa;
-      font-size: 14px;
-      margin-bottom: 45px;
-    }
-
-    .message {
-      font-size: 15px;
-      line-height: 2;
-      color: #555;
+      color: #aaa29a;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
     }
 
     .scroll {
-      margin-top: 50px;
+      margin-top: 38px;
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #aaa39b;
+    }
+
+    /* INVITATION */
+    .message-section {
+      padding: 100px 32px;
+      text-align: center;
+    }
+
+    .section-small {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: #a59c93;
+      margin-bottom: 30px;
+    }
+
+    .message-title {
+      font-size: 27px;
+      font-weight: normal;
+      margin-bottom: 35px;
+    }
+
+    .message {
+      font-size: 16px;
+      line-height: 2.1;
+      color: #615b55;
+    }
+
+    .divider {
+      width: 35px;
+      height: 1px;
+      background: #cfc7be;
+      margin: 50px auto;
+    }
+
+    /* DATE */
+    .wedding-info {
+      background: #f5f1eb;
+      padding: 90px 25px;
+      text-align: center;
+    }
+
+    .big-date {
+      font-size: 55px;
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+
+    .month {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: #857d74;
+      margin-bottom: 40px;
+    }
+
+    .time {
+      font-size: 22px;
+      margin-bottom: 45px;
+    }
+
+    .venue {
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
+    .year {
+      margin-top: 12px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #958d84;
+    }
+
+    /* GALLERY PLACEHOLDER */
+    .gallery {
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 40px;
+    }
+
+    .gallery-photo {
+      height: 230px;
+      background: #ece8e2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa39b;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 90px 25px;
+      text-align: center;
+      background: #3f3b37;
+      color: #f5f1eb;
+    }
+
+    footer .footer-names {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    footer p {
+      font-family: Arial, sans-serif;
       font-size: 11px;
       letter-spacing: 2px;
-      color: #aaa;
+      color: #cfc8c0;
+    }
+
+    @media (max-width: 480px) {
+      .names {
+        font-size: 32px;
+      }
+
+      .main-photo {
+        height: 55vh;
+        min-height: 390px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="invitation">
+<div class="invitation">
 
-    <section class="main">
+  <!-- FIRST SCREEN -->
+  <section class="hero">
 
-      <div class="small-title">
-        OUR WEDDING DAY
+    <div class="eyebrow">
+      WEDDING INVITATION
+    </div>
+
+    <h1 class="names">
+      Кыялбек
+      <div class="and">&</div>
+      Алтынай
+    </h1>
+
+    <div class="date">
+      16 ОКТЯБРЯ 2026 · 11:30
+    </div>
+
+    <div class="main-photo">
+      MAIN WEDDING PHOTO
+    </div>
+
+    <div class="scroll">
+      SCROLL ↓
+    </div>
+
+  </section>
+
+
+  <!-- INVITATION MESSAGE -->
+  <section class="message-section">
+
+    <div class="section-small">
+      INVITATION
+    </div>
+
+    <h2 class="message-title">
+      Дорогие родные и близкие!
+    </h2>
+
+    <div class="message">
+      Мы рады пригласить вас<br>
+      разделить с нами один из самых<br>
+      важных и счастливых дней<br>
+      нашей жизни.
+      <br><br>
+      Будем счастливы видеть вас<br>
+      на нашей свадьбе.
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="message">
+      Кыялбек & Алтынай
+    </div>
+
+  </section>
+
+
+  <!-- WEDDING INFORMATION -->
+  <section class="wedding-info">
+
+    <div class="section-small">
+      WEDDING DAY
+    </div>
+
+    <div class="big-date">
+      16
+    </div>
+
+    <div class="month">
+      ОКТЯБРЯ
+    </div>
+
+    <div class="time">
+      11:30
+    </div>
+
+    <div class="venue">
+      Центральный Дворец<br>
+      бракосочетания
+    </div>
+
+    <div class="year">
+      2026
+    </div>
+
+  </section>
+
+
+  <!-- GALLERY -->
+  <section class="gallery">
+
+    <div class="section-small">
+      OUR MOMENTS
+    </div>
+
+    <h2 class="message-title">
+      Кыялбек & Алтынай
+    </h2>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-photo">
+        PHOTO 01
       </div>
 
-      <h1>
-        신랑 & 신부
-      </h1>
-
-      <div class="date">
-        2027. 06. 13 SAT
+      <div class="gallery-photo">
+        PHOTO 02
       </div>
 
-      <div class="photo-placeholder">
-        WEDDING PHOTO
+      <div class="gallery-photo">
+        PHOTO 03
       </div>
 
-      <div class="message">
-        저희 두 사람이 사랑으로 만나<br>
-        이제 하나의 길을 걸어가려 합니다.<br><br>
-
-        소중한 분들을 모시고<br>
-        기쁨의 순간을 함께하고 싶습니다.
+      <div class="gallery-photo">
+        PHOTO 04
       </div>
 
-      <div class="scroll">
-        SCROLL ↓
-      </div>
+    </div>
 
-    </section>
+  </section>
 
-  </div>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-names">
+      Кыялбек & Алтынай
+    </div>
+
+    <p>
+      16 · 10 · 2026
+    </p>
+
+  </footer>
+
+</div>
 
 </body>
 </html>
