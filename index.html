@@ -210,6 +210,23 @@
   display: block;
   border-radius: 6px;
 }
+
+    /* MUSIC BUTTON */
+#musicBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(63, 59, 55, 0.85);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+}
     
     /* FOOTER */
     footer {
@@ -441,5 +458,35 @@
 
 </div>
 
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" loop preload="auto">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+  <button id="musicBtn" type="button">♫</button>
+<script>
+  const music = document.getElementById('bgMusic');
+  music.volume = 0.25;
+
+  function startMusic() {
+    music.play().catch(() => {});
+  }
+
+  startMusic();
+
+  document.addEventListener('click', startMusic, { once: true });
+  document.addEventListener('touchstart', startMusic, { once: true });
+const musicBtn = document.getElementById('musicBtn');
+
+musicBtn.addEventListener('click', function(event) {
+  event.stopPropagation();
+
+  if (music.paused) {
+    music.play();
+    musicBtn.textContent = '♫';
+  } else {
+    music.pause();
+    musicBtn.textContent = '♪';
+  }
+});</script>
 </body>
 </html>
