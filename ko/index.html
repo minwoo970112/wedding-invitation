@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>크얄벡 & 알트나이 — 결혼식</title>
+  <!-- LINK PREVIEW -->
+<meta property="og:title" content="크얄벡 & 알트나이 — 저희의 결혼식에 초대합니다 💍">
+<meta property="og:description" content="2026년 10월 16일 · 비슈케크">
+<meta property="og:image" content="https://wedding-invitation-xi-blue.vercel.app/wedding-preview.png">
+<meta property="og:url" content="https://wedding-invitation-xi-blue.vercel.app/ko/">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="크얄벡 & 알트나이 — 저희의 결혼식에 초대합니다 💍">
+<meta name="twitter:description" content="2026년 10월 16일 · 비슈케크">
+<meta name="twitter:image" content="https://wedding-invitation-xi-blue.vercel.app/wedding-preview.png">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #eeeae4;
+      color: #403d39;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .invitation {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      background: #fffdf9;
+      min-height: 100vh;
+      box-shadow: 0 0 30px rgba(0,0,0,0.05);
+    }
+
+    /* MAIN */
+    .hero {
+      min-height: 100vh;
+      padding: 70px 24px 50px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 5px;
+      color: #9b948b;
+      margin-bottom: 30px;
+    }
+
+    .names {
+      font-size: 36px;
+      font-weight: normal;
+      line-height: 1.35;
+      margin-bottom: 16px;
+    }
+
+    .and {
+      font-size: 20px;
+      font-style: italic;
+      color: #a3978b;
+      margin: 2px 0;
+    }
+
+    .date {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #77716b;
+      margin: 18px 0 36px;
+    }
+
+    .main-photo {
+      width: 100%;
+      height: 430px;
+      background: #e9e5df;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa29a;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+.main-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+    .scroll {
+      margin-top: 38px;
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #aaa39b;
+    }
+
+    /* INVITATION */
+    .message-section {
+      padding: 100px 32px;
+      text-align: center;
+    }
+
+    .section-small {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: #a59c93;
+      margin-bottom: 30px;
+    }
+
+    .message-title {
+      font-size: 27px;
+      font-weight: normal;
+      margin-bottom: 35px;
+    }
+
+    .message {
+      font-size: 16px;
+      line-height: 2.1;
+      color: #615b55;
+    }
+
+    .divider {
+      width: 35px;
+      height: 1px;
+      background: #cfc7be;
+      margin: 50px auto;
+    }
+
+    /* DATE */
+    .wedding-info {
+      background: #f5f1eb;
+      padding: 90px 25px;
+      text-align: center;
+    }
+
+    .big-date {
+      font-size: 55px;
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+
+    .month {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: #857d74;
+      margin-bottom: 40px;
+    }
+
+    .time {
+      font-size: 22px;
+      margin-bottom: 45px;
+    }
+
+    .venue {
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
+    .year {
+      margin-top: 12px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #958d84;
+    }
+
+    /* GALLERY PLACEHOLDER */
+    .gallery {
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 40px;
+    }
+
+    .gallery-photo {
+    width: 100%;
+    height: 210px;
+    background: #ece8e2;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.gallery-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+    /* GIFT QR */
+.gift-qr {
+  width: 220px;
+  height: auto;
+  margin: 20px auto 0;
+  display: block;
+  border-radius: 6px;
+}
+
+    /* MUSIC BUTTON */
+#musicBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(63, 59, 55, 0.85);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+}
+    
+    /* FOOTER */
+    footer {
+      padding: 90px 25px;
+      text-align: center;
+      background: #3f3b37;
+      color: #f5f1eb;
+    }
+
+    footer .footer-names {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    footer p {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #cfc8c0;
+    }
+
+    @media (max-width: 480px) {
+      .names {
+        font-size: 32px;
+      }
+
+      .main-photo {
+        height: 55vh;
+        min-height: 390px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="invitation">
+
+  <!-- FIRST SCREEN -->
+  <section class="hero">
+
+    <div class="eyebrow">
+     결혼합니다
+    </div>
+
+    <h1 class="names">
+      크얄벡
+<div class="and">&</div>
+알트나이
+    </h1>
+
+    <div class="date">
+      2026년 10월 16일 · 오전 11:30
+    </div>
+
+   <div class="main-photo">
+  <img src="../main.png" alt="크벡과 알트나이">
+</div>
+
+    <div class="scroll">
+      SCROLL ↓
+    </div>
+
+  </section>
+
+
+  <!-- INVITATION MESSAGE -->
+  <section class="message-section">
+
+    <div class="section-small">
+     초대합니다
+    </div>
+
+    <h2 class="message-title">
+      소중한 가족과 지인 여러분,
+    </h2>
+
+    <div class="message">
+      저희 두 사람이 새로운 시작을 하는<br>
+소중한 날에 여러분을 초대합니다.<br><br>
+함께 자리하시어<br>
+저희의 앞날을 축복해 주시면 감사하겠습니다.
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="message">
+      크알벡 & 알트나이
+    </div>
+
+  </section>
+
+
+  <!-- WEDDING INFORMATION -->
+  <section class="wedding-info">
+
+    <div class="section-small">
+      결혼식
+    </div>
+
+    <div class="big-date">
+     16
+    </div>
+
+    <div class="month">
+      10월
+    </div>
+
+    <div class="time">
+      11:30
+    </div>
+
+    <div class="venue">
+      중앙 혼인등록소
+    </div>
+
+    <div class="year">
+      2026
+    </div>
+
+  </section>
+
+
+  <!-- GALLERY -->
+<!-- WEDDING LOCATIONS -->
+<section class="gallery">
+
+  <div class="section-small">
+   예식 안내
+  </div>
+
+  <h2 class="message-title">
+    예식 장소
+  </h2>
+
+  <!-- CEREMONY -->
+  <div class="gallery-photo">
+    <img src="../ceremony.webp.webp" alt="중앙 혼인등록소">
+  </div>
+
+  <h2 class="message-title">
+    중앙 혼인등록소
+  </h2>
+
+  <p>
+    비슈케크<br>
+   주수프 압드라흐마노프 거리 197<br><br>
+    <strong>11:10</strong>
+  </p>
+
+  <br><br>
+
+  <!-- BANQUET -->
+  <div class="gallery-photo">
+    <img src="../banquet.jpg" alt="EGO EVENT HALL">
+  </div>
+
+  <h2 class="message-title">
+    EGO EVENT HALL
+  </h2>
+
+  <p>
+    비슈케크<br>
+    토콤바예프 거리 43<br><br>
+    <strong>12:50</strong>
+  </p>
+
+</section>
+   
+| <!-- GIFT -->
+<section class="gallery">
+
+  <div class="section-small">
+    마음 전하기
+  </div>
+
+  <h2 class="message-title">
+    축하의 마음
+  </h2>
+
+  <p>
+   저희의 새로운 시작을 축하해 주시는 마음을<br>
+전하고 싶으시다면 아래 계좌를 이용해 주세요.
+  </p>
+
+  <br><br>
+
+  <h2 class="message-title">
+    🤵 크얄벡
+  </h2>
+
+  <p>
+    우리 은행<br>
+    1002-856810572<br>
+    ISLAMOV KY
+  </p>
+
+  <br>
+
+  <h2 class="message-title">
+    👰 알트나이
+  </h2>
+
+  <p>
+    ELQR
+  </p>
+
+ <img class="gift-qr" src="../bride-qr.jpg" alt="알트나이 ELQR">
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-names">
+      크얄벡 & 알트나이
+    </div>
+
+    <p>
+      2026년 10월 16일
+    </p>
+
+  </footer>
+
+</div>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" loop preload="auto">
+ <source src="../music.mp3" type="audio/mpeg">
+</audio>
+  <button id="musicBtn" type="button">♫</button>
+<script>
+  const music = document.getElementById('bgMusic');
+  music.volume = 0.25;
+
+  function startMusic() {
+    music.play().catch(() => {});
+  }
+
+  startMusic();
+
+  document.addEventListener('click', startMusic, { once: true });
+  document.addEventListener('touchstart', startMusic, { once: true });
+const musicBtn = document.getElementById('musicBtn');
+
+musicBtn.addEventListener('click', function(event) {
+  event.stopPropagation();
+
+  if (music.paused) {
+    music.play();
+    musicBtn.textContent = '♫';
+  } else {
+    music.pause();
+    musicBtn.textContent = '♪';
+  }
+});</script>
+</body>
+</html>
